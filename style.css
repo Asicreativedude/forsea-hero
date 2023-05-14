@@ -1,6 +1,6 @@
 :root {
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	color: #222222;
+	background-color: #edf1f7;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -9,13 +9,41 @@
 	-webkit-text-size-adjust: 100%;
 }
 
-html,
-body,
 #app {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	overflow: hidden;
+	z-index: -1;
+	display: flex;
+	justify-content: flex-end;
+}
+html {
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 10.8rem;
+	max-width: 100.7rem;
+}
+h2 {
+	font-size: 4.8rem;
+}
+p {
+	font-size: 1.6rem;
+}
+.hero {
+	padding: 0 14.4rem;
+	height: 100vh;
+}
+.second {
+	padding: 4rem 14.4rem;
+	height: 100vh;
+	display: flex;
+}
+.second-content {
+	max-width: 50%;
 }

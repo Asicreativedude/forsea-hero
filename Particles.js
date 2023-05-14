@@ -2,6 +2,9 @@ import * as THREE from 'three';
 import fragmentShader from './shaders/fragmentShader.frag';
 import vertexShader from './shaders/vertexShader.vert';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 function Particles(scene) {
 	const loader = new THREE.TextureLoader();
 	let texWidth = 0;
@@ -46,13 +49,14 @@ function Particles(scene) {
 			// console.log('numVisible', numVisible, this.numPoints);
 		}
 		const uniforms = {
-			uTime: { value: 0 },
-			uRandom: { value: 0.0 },
+			uTime: { value: 5.0 },
+			uRandom: { value: 150.0 },
 			uDepth: { value: 1.0 },
 			uSize: { value: 1.0 },
 			uTextureSize: { value: new THREE.Vector2(texWidth, texHeight) },
 			uTexture: { value: texture },
 			uTouch: { value: null },
+			uTurbulence: { value: 25.0 },
 		};
 
 		const material = new THREE.RawShaderMaterial({
@@ -61,7 +65,7 @@ function Particles(scene) {
 			fragmentShader,
 			depthTest: false,
 			transparent: true,
-			// blending: THREE.AdditiveBlending
+			// blending: THREE.AdditiveBlending,
 		});
 
 		const geometry = new THREE.InstancedBufferGeometry();
@@ -116,16 +120,59 @@ function Particles(scene) {
 		);
 
 		const mesh = new THREE.Mesh(geometry, material);
+		mesh.position.x = 200;
 		scene.add(mesh);
-		// show(mesh);
+		onload(mesh);
 	};
 
-	const show = (mesh) => {
+	const onload = (mesh) => {
+		gsap.fromTo(
+			mesh.material.uniforms.uRandom,
+			{
+				value: 2500.0,
+			},
+			{
+				duration: 8,
+				value: 2000.0,
+				ease: 'linear',
+				repeat: -1,
+				yoyo: true,
+				id: 'first',
+			}
+		);
 		gsap.to(mesh.material.uniforms.uRandom, {
-			duration: 4,
-			value: 50.0,
-			ease: 'power3.out',
+			scrollTrigger: {
+				trigger: '.second-content',
+				start: 'top bottom',
+				end: 'bottom bottom',
+				markers: true,
+				scrub: true,
+				onEnter: () => {
+					gsap.getById('first').pause();
+				},
+				onEnterBack: () => {
+					gsap.getById('first').play();
+				},
+			},
+			duration: 1,
+			value: 0.0,
+			ease: 'linear',
 		});
+
+		// gsap.fromTo(
+		// 	mesh.material.uniforms.uDepth,
+		// 	{
+		// 		value: 150.0,
+		// 	},
+		// 	{
+		// 		duration: 8,
+		// 		value: -500.0,
+		// 		ease: 'power1.out',
+		// 		repeat: -1,
+		// 		yoyo: true,
+		// 	}
+		// );
 	};
 }
+
 export default Particles;
