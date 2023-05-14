@@ -14,7 +14,10 @@ void main() {
 
 	// pixel color
 	vec4 colA = texture2D(uTexture, puv);
-
+	float grey = colA.a;
+	if (grey < 0.9) {
+		discard;
+	}
 	// greyscale
 	// float grey = colA.r * 0.21 + colA.g * 0.71 + colA.b * 0.07;
 	// vec4 colB = vec4(grey, grey, grey, 1.0);
@@ -25,9 +28,11 @@ void main() {
 	float dist = radius - distance(uv, vec2(0.5));
 	float t = smoothstep(0.0, border, dist);
 
+
+
 	// final color
 	color = colA;
 	color.a = t;
-
+	
 	gl_FragColor = color;
 }

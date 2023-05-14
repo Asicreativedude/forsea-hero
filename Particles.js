@@ -4,7 +4,8 @@ import vertexShader from './shaders/vertexShader.vert';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-
+const readyImg = document.querySelector('.ready-img');
+const canvas = document.getElementById('app');
 function Particles(scene) {
 	const loader = new THREE.TextureLoader();
 	let texWidth = 0;
@@ -42,11 +43,9 @@ function Particles(scene) {
 			const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 			originalColors = Float32Array.from(imgData.data);
 
-			for (let i = 0; i < this.numPoints; i++) {
+			for (let i = 0; i < numPoints; i++) {
 				if (originalColors[i * 4 + 0] > threshold) numVisible++;
 			}
-
-			// console.log('numVisible', numVisible, this.numPoints);
 		}
 		const uniforms = {
 			uTime: { value: 5.0 },
@@ -65,6 +64,7 @@ function Particles(scene) {
 			fragmentShader,
 			depthTest: false,
 			transparent: true,
+			depthWrite: false,
 			// blending: THREE.AdditiveBlending,
 		});
 
@@ -120,19 +120,22 @@ function Particles(scene) {
 		);
 
 		const mesh = new THREE.Mesh(geometry, material);
-		mesh.position.x = 200;
+		mesh.position.x = 170;
+
+		mesh.rotateZ(0.35447637);
 		scene.add(mesh);
 		onload(mesh);
 	};
 
 	const onload = (mesh) => {
+		gsap.set(readyImg, { opacity: 0 });
 		gsap.fromTo(
 			mesh.material.uniforms.uRandom,
 			{
 				value: 2500.0,
 			},
 			{
-				duration: 8,
+				duration: 15,
 				value: 2000.0,
 				ease: 'linear',
 				repeat: -1,
@@ -142,37 +145,41 @@ function Particles(scene) {
 		);
 		gsap.to(mesh.material.uniforms.uRandom, {
 			scrollTrigger: {
-				trigger: '.second-content',
+				trigger: '.second',
 				start: 'top bottom',
-				end: 'bottom bottom',
+				end: 'center center',
 				markers: true,
 				scrub: true,
 				onEnter: () => {
 					gsap.getById('first').pause();
-				},
-				onEnterBack: () => {
-					gsap.getById('first').play();
 				},
 			},
 			duration: 1,
 			value: 0.0,
 			ease: 'linear',
 		});
-
-		// gsap.fromTo(
-		// 	mesh.material.uniforms.uDepth,
-		// 	{
-		// 		value: 150.0,
-		// 	},
-		// 	{
-		// 		duration: 8,
-		// 		value: -500.0,
-		// 		ease: 'power1.out',
-		// 		repeat: -1,
-		// 		yoyo: true,
-		// 	}
-		// );
+		gsap.to(readyImg, {
+			scrollTrigger: {
+				trigger: '.second',
+				start: 'center 60%',
+				end: 'center center',
+				markers: true,
+				scrub: true,
+			},
+			duration: 1,
+			opacity: 1,
+		});
 	};
+	gsap.to(canvas, {
+		scrollTrigger: {
+			trigger: '.second',
+			start: 'center 55%',
+			end: 'center center',
+			scrub: true,
+		},
+		duration: 1,
+		opacity: 0,
+	});
 }
 
 export default Particles;
