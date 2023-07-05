@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const readyImg = document.querySelector('.ready-img');
 const canvas = document.getElementById('app');
+const isTablet = window.innerWidth < 991;
+const isMobile = window.innerWidth < 767;
 function Particles(scene) {
 	const loader = new THREE.TextureLoader();
 	let texWidth = 0;
@@ -120,8 +122,20 @@ function Particles(scene) {
 		);
 
 		const mesh = new THREE.Mesh(geometry, material);
-		mesh.position.x = 170;
-
+		{
+			isTablet
+				? ((mesh.position.y = 65),
+				  mesh.scale.set(0.6, 0.6, 0.6),
+				  (mesh.position.x = -25))
+				: ((mesh.position.x = 170), (mesh.position.y = -1));
+		}
+		{
+			isMobile &&
+				((mesh.position.y = 75),
+				mesh.scale.set(0.4, 0.4, 0.4),
+				(mesh.position.x = -25));
+		}
+		console.log(mesh);
 		mesh.rotateZ(0.35447637);
 		scene.add(mesh);
 		onload(mesh);
@@ -145,13 +159,24 @@ function Particles(scene) {
 		);
 		gsap.to(mesh.material.uniforms.uRandom, {
 			scrollTrigger: {
-				trigger: '.second',
+				trigger: '.section_seafood-meat',
 				start: 'top bottom',
-				end: 'center center',
-				markers: true,
+				end: isTablet ? 'top 5%' : isMobile ? ' top 3%' : 'top top',
+				// markers: true,
 				scrub: true,
 				onEnter: () => {
 					gsap.getById('first').pause();
+				},
+
+				onUpdate: (self) => {
+					if (self.direction === -1) {
+						if (self.progress < 0.2) {
+							if (gsap.getById('first').paused()) {
+								gsap.getById('first').resume();
+								return;
+							}
+						}
+					}
 				},
 			},
 			duration: 1,
@@ -160,10 +185,10 @@ function Particles(scene) {
 		});
 		gsap.to(readyImg, {
 			scrollTrigger: {
-				trigger: '.second',
-				start: 'center 60%',
-				end: 'center center',
-				markers: true,
+				trigger: '.section_seafood-meat',
+				start: isTablet ? 'top 10%' : 'top 4%',
+				end: isTablet ? 'top 5%' : 'top top',
+				// markers: true,
 				scrub: true,
 			},
 			duration: 1,
@@ -172,9 +197,10 @@ function Particles(scene) {
 	};
 	gsap.to(canvas, {
 		scrollTrigger: {
-			trigger: '.second',
-			start: 'center 55%',
-			end: 'center center',
+			trigger: '.section_seafood-meat',
+			start: isTablet ? 'top 10%' : 'top 3%',
+			end: isTablet ? 'top 6%' : isMobile ? 'top top' : 'top -2%',
+			// markers: true,
 			scrub: true,
 		},
 		duration: 1,
