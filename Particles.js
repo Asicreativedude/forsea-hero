@@ -14,16 +14,19 @@ function Particles(scene) {
 	const loader = new THREE.TextureLoader();
 	let texWidth = 0;
 	let texHeight = 0;
-	const texture = loader.load('/unagi-1.png', (tex) => {
-		tex.minFilter = THREE.LinearFilter;
-		tex.magFilter = THREE.LinearFilter;
-		tex.format = THREE.RGBAFormat;
+	const texture = loader.load(
+		'https://uploads-ssl.webflow.com/6490147be4f743ad6fe5e064/64a5b94c57cf0ebd6b9ce867_unagi-1.png',
+		(tex) => {
+			tex.minFilter = THREE.LinearFilter;
+			tex.magFilter = THREE.LinearFilter;
+			tex.format = THREE.RGBAFormat;
 
-		texWidth = tex.image.width;
-		texHeight = tex.image.height;
+			texWidth = tex.image.width;
+			texHeight = tex.image.height;
 
-		initPoints(true);
-	});
+			initPoints(true);
+		}
+	);
 	const initPoints = (discard) => {
 		const numPoints = texWidth * texHeight;
 		let numVisible = numPoints;
@@ -137,7 +140,6 @@ function Particles(scene) {
 				mesh.scale.set(0.4, 0.4, 0.4),
 				(mesh.position.x = -25));
 		}
-		console.log(mesh);
 		mesh.rotateZ(0.35447637);
 		scene.add(mesh);
 		onload(mesh);
