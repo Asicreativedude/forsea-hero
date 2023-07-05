@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		
+		
+		
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<script type="module" crossorigin src="./main.js"></script>
+		<link rel="stylesheet" href="./assets/index-f6ca8ea8.css">
+	</head>
+
+	<body data-color="#EDF1F7">
+		<div class="page-wrapper">
+			<div class="rem w-embed">
+				<style>
+					html {
+						font-size: calc(0.3666576964477933rem + 0.21528525296017226vw);
+					}
+					@media screen and (max-width: 1920px) {
+						html {
+							font-size: calc(0.36665769644779334rem + 0.21528525296017226vw);
+						}
+					}
+					@media screen and (max-width: 991px) {
+						html {
+							font-size: 0.625rem;
+						}
+					}
+				</style>
+			</div>
+			<div class="global-styles w-embed">
+				<style>
+					body {
+						-ms-overflow-style: none; /* for Internet Explorer, Edge */
+						scrollbar-width: none; /* for Firefox */
+						overflow-y: scroll;
+					}
+					body::-webkit-scrollbar {
+						display: none; /* for Chrome, Safari, and Opera */
+					}
+					/* Snippet gets rid of top margin on first element in any rich text*/
+					.w-richtext > :first-child {
+						margin-top: 0;
+					}
+					/* Snippet gets rid of bottom margin on last element in any rich text*/
+					.w-richtext > :last-child,
+					.w-richtext ol li:last-child,
+					.w-richtext ul li:last-child {
+						margin-bottom: 0;
+					}
+					/* Snippet makes all link elements listed below to inherit color from their parent */
+					a,
+					.w-tab-link,
+					.w-nav-link,
+					.w-dropdown-btn,
+					.w-dropdown-toggle,
+					.w-dropdown-link {
+						color: inherit;
+					}
+					/* Snippet prevents all click and hover interaction with an element */
+					.clickable-off,
+					.hero-image-wrap {
+						pointer-events: none;
+					}
+					/* Snippet enables all click and hover interaction with an element */
+					.clickable-on {
+						pointer-events: auto;
+					}
+					/* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+					.div-square::after {
+						content: '';
+						display: block;
+						padding-bottom: 100%;
+					}
+					/*Hide focus outline for main content element*/
+					main:focus-visible {
+						outline: -webkit-focus-ring-color auto 0px;
+					}
+					/*Apply "..." After 3 lines of Text */
+					.text-style-3lines {
+						display: -webkit-box;
+						overflow: hidden;
+						-webkit-line-clamp: 3;
+						-webkit-box-orient: vertical;
+					}
+					/*Apply "..." After 2 lines of Text */
+					.text-style-2lines {
+						display: -webkit-box;
+						overflow: hidden;
+						-webkit-line-clamp: 2;
+						-webkit-box-orient: vertical;
+					}
+					/* Make sure containers never lose their center alignment*/
+					.container,
+					.container-small,
+					.container-large {
+						margin-right: auto !important;
+						margin-left: auto !important;
+					}
+					/*Reset selects, buttons, and links styles*/
+					.w-input,
+					.w-select,
+					a {
+						color: inherit;
+						text-decoration: inherit;
+						font-size: inherit;
+					}
+					/*Hide focus outline when using anchor links to go to sections on safari*/
+					*:focus {
+						outline: none;
+					}
+					/* Prevents social media icons from moving on hover on safari */
+					.social-icon {
+						-webkit-backface-visibility: hidden;
+						-webkit-transform: translateZ(0) scale(1, 1);
+					}
+					/*main button before arrow */
+					.read-more-button:after {
+						content: url(https://uploads-ssl.webflow.com/6490147be4f743ad6fe5e064/649026b84af603717c3bffae_read-more-arrow.svg);
+						width: 3.2rem;
+						height: 0.7rem;
+						float: right;
+						margin-top: 0rem;
+						margin-left: 3.2rem;
+						transition: all 0.3s;
+					}
+					.read-more-button:hover:after {
+						content: url(https://uploads-ssl.webflow.com/6490147be4f743ad6fe5e064/649026b84af603717c3bffae_read-more-arrow.svg);
+						width: 3.2rem;
+						height: 0.7rem;
+						float: right;
+						margin-top: 0rem;
+						margin-left: 3.2rem;
+						transform: translate(1rem);
+					}
+					/*Navbar styles on mobile only*/
+					@media only screen and (max-width: 991px) {
+						.menu-button-svg {
+							opacity: 1;
+						}
+						.exit-menu-button-svg {
+							opacity: 0;
+						}
+						.menu-button.w--open .exit-menu-button-svg {
+							opacity: 1;
+						}
+						.menu-button.w--open .menu-button-svg {
+							opacity: 0;
+						}
+					}
+				</style>
+			</div>
+			<div
+				data-animation="default"
+				class="navbar w-nav"
+				data-easing2="ease"
+				data-easing="ease"
+				data-collapse="medium"
+				data-w-id="086b89c0-fb69-74f8-5898-42eb77dcb95d"
+				role="banner"
+				data-duration="400"
+				data-doc-height="1"
+			>
+				<div class="navbar-container w-container">
+					<a
+						href="index.html"
+						aria-current="page"
+						class="navbar-brand w-nav-brand w--current"
+						><img
+							src="images/Forsea-Logo.png"
+							loading="lazy"
+							width="139"
+							alt="Forsea Logo"
+							class="navbar-logo"
+					/></a>
+					<nav role="navigation" class="nav-menu w-nav-menu">
+						<div class="links-wrap">
+							<a href="#" class="nav-link w-nav-link">Technology</a>
+							<a href="about.html" class="nav-link w-nav-link">About us</a>
+							<a href="impact.html" class="nav-link w-nav-link">Impact</a>
+							<a href="career-lobby.html" class="nav-link w-nav-link"
+								>Careers</a
+							>
+							<a href="news.html" class="nav-link w-nav-link">News</a>
+							<a href="#" class="nav-link mobile-only w-nav-link">Contact</a>
+						</div>
+					</nav>
+					<a href="contact.html" class="nav-link desktop-only w-nav-link"
+						>Contact</a
+					>
+					<div class="menu-button w-nav-button">
+						<div class="menu-button-svg w-embed">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100%"
+								height="100%"
+								viewbox="0 0 34 17"
+								fill="none"
+							>
+								<path
+									d="M0.936768 2.80683L1.90108 2.43038L1.98143 2.39943L2.06179 2.36858L2.14215 2.33784L2.22251 2.30721L2.30287 2.27671L2.38323 2.24634L2.46359 2.21611L2.54395 2.18602L2.62431 2.15608L2.70467 2.12631L2.78502 2.0967L2.86538 2.06727L2.94574 2.03802L3.0261 2.00897L3.10646 1.9801L3.18682 1.95145L3.26718 1.923L3.34754 1.89477L3.4279 1.86677L3.50825 1.839L3.58861 1.81146L3.66897 1.78417L3.74933 1.75714L3.82969 1.73036L3.91005 1.70385L3.99041 1.67761L4.07077 1.65166L4.15113 1.62598L4.23149 1.6006L4.31184 1.57551L4.3922 1.55073L4.47256 1.52626L4.55292 1.5021L4.63328 1.47827L4.71364 1.45476L4.794 1.43159L4.87436 1.40876L4.95472 1.38627L5.03508 1.36413L5.11543 1.34235L5.19579 1.32093L5.27615 1.29987L5.35651 1.27919L5.43687 1.25888L5.51723 1.23896L5.59759 1.21942L5.67795 1.20028L5.75831 1.18153L5.83867 1.16318L5.91902 1.14524L5.99938 1.12771L6.07974 1.11059L6.1601 1.09389L6.24046 1.07762L6.32082 1.06177L6.40118 1.04635L6.48154 1.03136L6.5619 1.01682L6.64226 1.00271L6.72261 0.989052L6.80297 0.97584L6.88333 0.963081L6.96369 0.950776L7.04405 0.938929L7.12441 0.927543L7.20477 0.916621L7.28513 0.906164L7.36549 0.896178L7.44585 0.886662L7.5262 0.877621L7.60656 0.869055L7.68692 0.860967L7.76728 0.85336L7.84764 0.846234L7.928 0.839593L8.00836 0.833436L8.08872 0.827767L8.16908 0.822585L8.24943 0.817893L8.32979 0.813693L8.41015 0.809984L8.49051 0.806768L8.57087 0.804044L8.65123 0.801816L8.73159 0.800082L8.81195 0.798843L8.89231 0.798099L8.97267 0.797852L9.05302 0.798099L9.13338 0.798843L9.21374 0.800082L9.2941 0.801816L9.37446 0.804044L9.45482 0.806768L9.53518 0.809984L9.61554 0.813693L9.6959 0.817893L9.77626 0.822585L9.85661 0.827767L9.93697 0.833436L10.0173 0.839593L10.0977 0.846234L10.1781 0.85336L10.2584 0.860967L10.3388 0.869055L10.4191 0.877621L10.4995 0.886662L10.5798 0.896178L10.6602 0.906164L10.7406 0.916621L10.8209 0.927543L10.9013 0.938929L10.9816 0.950776L11.062 0.963081L11.1424 0.97584L11.2227 0.989052L11.3031 1.00271L11.3834 1.01682L11.4638 1.03136L11.5442 1.04635L11.6245 1.06177L11.7049 1.07762L11.7852 1.09389L11.8656 1.11059L11.9459 1.12771L12.0263 1.14524L12.1067 1.16318L12.187 1.18153L12.2674 1.20028L12.3477 1.21942L12.4281 1.23896L12.5085 1.25888L12.5888 1.27919L12.6692 1.29987L12.7495 1.32093L12.8299 1.34235L12.9103 1.36413L12.9906 1.38627L13.071 1.40876L13.1513 1.43159L13.2317 1.45476L13.3121 1.47827L13.3924 1.5021L13.4728 1.52626L13.5531 1.55073L13.6335 1.57551L13.7138 1.6006L13.7942 1.62598L13.8746 1.65166L13.9549 1.67761L14.0353 1.70385L14.1156 1.73036L14.196 1.75714L14.2764 1.78417L14.3567 1.81146L14.4371 1.839L14.5174 1.86677L14.5978 1.89477L14.6782 1.923L14.7585 1.95145L14.8389 1.9801L14.9192 2.00897L14.9996 2.03802L15.0799 2.06727L15.1603 2.0967L15.2407 2.12631L15.321 2.15608L15.4014 2.18602L15.4817 2.21611L15.5621 2.24634L15.6425 2.27671L15.7228 2.30721L15.8032 2.33784L15.8835 2.36858L15.9639 2.39943L16.0443 2.43038L17.9729 3.18327L18.0532 3.21422L18.1336 3.24507L18.2139 3.27581L18.2943 3.30644L18.3747 3.33694L18.455 3.36731L18.5354 3.39755L18.6157 3.42763L18.6961 3.45757L18.7765 3.48734L18.8568 3.51695L18.9372 3.54638L19.0175 3.57563L19.0979 3.60469L19.1783 3.63355L19.2586 3.66221L19.339 3.69065L19.4193 3.71888L19.4997 3.74689L19.5801 3.77466L19.6604 3.80219L19.7408 3.82948L19.8211 3.85651L19.9015 3.88329L19.9818 3.9098L20.0622 3.93604L20.1426 3.962L20.2229 3.98767L20.3033 4.01306L20.3836 4.03814L20.464 4.06292L20.5444 4.08739L20.6247 4.11155L20.7051 4.13539L20.7854 4.15889L20.8658 4.18206L20.9462 4.2049L21.0265 4.22739L21.1069 4.24952L21.1872 4.27131L21.2676 4.29273L21.3479 4.31378L21.4283 4.33446L21.5087 4.35477L21.589 4.37469L21.6694 4.39423L21.7497 4.41337L21.8301 4.43212L21.9105 4.45047L21.9908 4.46841L22.0712 4.48594L22.1515 4.50306L22.2319 4.51976L22.3123 4.53603L22.3926 4.55188L22.473 4.5673L22.5533 4.58229L22.6337 4.59684L22.7141 4.61094L22.7944 4.6246L22.8748 4.63781L22.9551 4.65057L23.0355 4.66288L23.1158 4.67472L23.1962 4.68611L23.2766 4.69703L23.3569 4.70749L23.4373 4.71747L23.5176 4.72699L23.598 4.73603L23.6784 4.7446L23.7587 4.75268L23.8391 4.76029L23.9194 4.76742L23.9998 4.77406L24.0802 4.78022L24.1605 4.78589L24.2409 4.79107L24.3212 4.79576L24.4016 4.79996L24.4819 4.80367L24.5623 4.80688L24.6427 4.80961L24.723 4.81184L24.8034 4.81357L24.8837 4.81481L24.9641 4.81555L25.0445 4.8158L25.1248 4.81555L25.2052 4.81481L25.2855 4.81357L25.3659 4.81184L25.4463 4.80961L25.5266 4.80688L25.607 4.80367L25.6873 4.79996L25.7677 4.79576L25.8481 4.79107L25.9284 4.78589L26.0088 4.78022L26.0891 4.77406L26.1695 4.76742L26.2498 4.76029L26.3302 4.75268L26.4106 4.7446L26.4909 4.73603L26.5713 4.72699L26.6516 4.71747L26.732 4.70749L26.8124 4.69703L26.8927 4.68611L26.9731 4.67472L27.0534 4.66288L27.1338 4.65057L27.2142 4.63781L27.2945 4.6246L27.3749 4.61094L27.4552 4.59684L27.5356 4.58229L27.616 4.5673L27.6963 4.55188L27.7767 4.53603L27.857 4.51976L27.9374 4.50306L28.0177 4.48594L28.0981 4.46841L28.1785 4.45047L28.2588 4.43212L28.3392 4.41337L28.4195 4.39423L28.4999 4.37469L28.5803 4.35477L28.6606 4.33446L28.741 4.31378L28.8213 4.29273L28.9017 4.27131L28.9821 4.24952L29.0624 4.22739L29.1428 4.2049L29.2231 4.18206L29.3035 4.15889L29.3838 4.13539L29.4642 4.11155L29.5446 4.08739L29.6249 4.06292L29.7053 4.03814L29.7856 4.01306L29.866 3.98767L29.9464 3.962L30.0267 3.93604L30.1071 3.9098L30.1874 3.88329L30.2678 3.85651L30.3482 3.82948L30.4285 3.80219L30.5089 3.77466L30.5892 3.74689L30.6696 3.71888L30.7499 3.69065L30.8303 3.66221L30.9107 3.63355L30.991 3.60469L31.0714 3.57563L31.1517 3.54638L31.2321 3.51695L31.3125 3.48734L31.3928 3.45757L31.4732 3.42763L31.5535 3.39755L31.6339 3.36731L31.7143 3.33694L31.7946 3.30644L31.875 3.27581L31.9553 3.24507L32.0357 3.21422L32.1161 3.18327L33 2.83838M0.936768 8.28201L1.90108 7.90556L1.98143 7.87461L2.06179 7.84376L2.14215 7.81302L2.22251 7.78239L2.30287 7.75189L2.38323 7.72152L2.46359 7.69129L2.54395 7.6612L2.62431 7.63126L2.70467 7.60149L2.78502 7.57188L2.86538 7.54245L2.94574 7.5132L3.0261 7.48415L3.10646 7.45528L3.18682 7.42663L3.26718 7.39818L3.34754 7.36995L3.4279 7.34195L3.50825 7.31417L3.58861 7.28664L3.66897 7.25935L3.74933 7.23232L3.82969 7.20554L3.91005 7.17903L3.99041 7.15279L4.07077 7.12683L4.15113 7.10116L4.23149 7.07578L4.31184 7.05069L4.3922 7.02591L4.47256 7.00144L4.55292 6.97728L4.63328 6.95345L4.71364 6.92994L4.794 6.90677L4.87436 6.88393L4.95472 6.86145L5.03508 6.83931L5.11543 6.81753L5.19579 6.79611L5.27615 6.77505L5.35651 6.75437L5.43687 6.73406L5.51723 6.71414L5.59759 6.6946L5.67795 6.67546L5.75831 6.65671L5.83867 6.63836L5.91902 6.62042L5.99938 6.60289L6.07974 6.58577L6.1601 6.56907L6.24046 6.5528L6.32082 6.53695L6.40118 6.52153L6.48154 6.50654L6.5619 6.492L6.64226 6.47789L6.72261 6.46423L6.80297 6.45102L6.88333 6.43826L6.96369 6.42596L7.04405 6.41411L7.12441 6.40272L7.20477 6.3918L7.28513 6.38134L7.36549 6.37136L7.44585 6.36184L7.5262 6.3528L7.60656 6.34423L7.68692 6.33615L7.76728 6.32854L7.84764 6.32141L7.928 6.31477L8.00836 6.30862L8.08872 6.30295L8.16908 6.29776L8.24943 6.29307L8.32979 6.28887L8.41015 6.28516L8.49051 6.28195L8.57087 6.27922L8.65123 6.27699L8.73159 6.27526L8.81195 6.27402L8.89231 6.27328L8.97267 6.27303L9.05302 6.27328L9.13338 6.27402L9.21374 6.27526L9.2941 6.27699L9.37446 6.27922L9.45482 6.28195L9.53518 6.28516L9.61554 6.28887L9.6959 6.29307L9.77626 6.29776L9.85661 6.30295L9.93697 6.30862L10.0173 6.31477L10.0977 6.32141L10.1781 6.32854L10.2584 6.33615L10.3388 6.34423L10.4191 6.3528L10.4995 6.36184L10.5798 6.37136L10.6602 6.38134L10.7406 6.3918L10.8209 6.40272L10.9013 6.41411L10.9816 6.42596L11.062 6.43826L11.1424 6.45102L11.2227 6.46423L11.3031 6.47789L11.3834 6.492L11.4638 6.50654L11.5442 6.52153L11.6245 6.53695L11.7049 6.5528L11.7852 6.56907L11.8656 6.58577L11.9459 6.60289L12.0263 6.62042L12.1067 6.63836L12.187 6.65671L12.2674 6.67546L12.3477 6.6946L12.4281 6.71414L12.5085 6.73406L12.5888 6.75437L12.6692 6.77505L12.7495 6.79611L12.8299 6.81753L12.9103 6.83931L12.9906 6.86145L13.071 6.88393L13.1513 6.90677L13.2317 6.92994L13.3121 6.95345L13.3924 6.97728L13.4728 7.00144L13.5531 7.02591L13.6335 7.05069L13.7138 7.07578L13.7942 7.10116L13.8746 7.12683L13.9549 7.15279L14.0353 7.17903L14.1156 7.20554L14.196 7.23232L14.2764 7.25935L14.3567 7.28664L14.4371 7.31417L14.5174 7.34195L14.5978 7.36995L14.6782 7.39818L14.7585 7.42663L14.8389 7.45528L14.9192 7.48415L14.9996 7.5132L15.0799 7.54245L15.1603 7.57188L15.2407 7.60149L15.321 7.63126L15.4014 7.6612L15.4817 7.69129L15.5621 7.72152L15.6425 7.75189L15.7228 7.78239L15.8032 7.81302L15.8835 7.84376L15.9639 7.87461L16.0443 7.90556L17.9729 8.65845L18.0532 8.6894L18.1336 8.72025L18.2139 8.75099L18.2943 8.78162L18.3747 8.81212L18.455 8.84249L18.5354 8.87272L18.6157 8.90281L18.6961 8.93275L18.7765 8.96252L18.8568 8.99213L18.9372 9.02156L19.0175 9.05081L19.0979 9.07987L19.1783 9.10873L19.2586 9.13738L19.339 9.16583L19.4193 9.19406L19.4997 9.22206L19.5801 9.24984L19.6604 9.27737L19.7408 9.30466L19.8211 9.33169L19.9015 9.35847L19.9818 9.38498L20.0622 9.41122L20.1426 9.43718L20.2229 9.46285L20.3033 9.48823L20.3836 9.51332L20.464 9.5381L20.5444 9.56257L20.6247 9.58673L20.7051 9.61056L20.7854 9.63407L20.8658 9.65724L20.9462 9.68008L21.0265 9.70257L21.1069 9.7247L21.1872 9.74648L21.2676 9.7679L21.3479 9.78896L21.4283 9.80964L21.5087 9.82995L21.589 9.84987L21.6694 9.86941L21.7497 9.88855L21.8301 9.9073L21.9105 9.92565L21.9908 9.94359L22.0712 9.96112L22.1515 9.97824L22.2319 9.99494L22.3123 10.0112L22.3926 10.0271L22.473 10.0425L22.5533 10.0575L22.6337 10.072L22.7141 10.0861L22.7944 10.0998L22.8748 10.113L22.9551 10.1258L23.0355 10.1381L23.1158 10.1499L23.1962 10.1613L23.2766 10.1722L23.3569 10.1827L23.4373 10.1927L23.5176 10.2022L23.598 10.2112L23.6784 10.2198L23.7587 10.2279L23.8391 10.2355L23.9194 10.2426L23.9998 10.2492L24.0802 10.2554L24.1605 10.2611L24.2409 10.2662L24.3212 10.2709L24.4016 10.2751L24.4819 10.2788L24.5623 10.2821L24.6427 10.2848L24.723 10.287L24.8034 10.2887L24.8837 10.29L24.9641 10.2907L25.0445 10.291L25.1248 10.2907L25.2052 10.29L25.2855 10.2887L25.3659 10.287L25.4463 10.2848L25.5266 10.2821L25.607 10.2788L25.6873 10.2751L25.7677 10.2709L25.8481 10.2662L25.9284 10.2611L26.0088 10.2554L26.0891 10.2492L26.1695 10.2426L26.2498 10.2355L26.3302 10.2279L26.4106 10.2198L26.4909 10.2112L26.5713 10.2022L26.6516 10.1927L26.732 10.1827L26.8124 10.1722L26.8927 10.1613L26.9731 10.1499L27.0534 10.1381L27.1338 10.1258L27.2142 10.113L27.2945 10.0998L27.3749 10.0861L27.4552 10.072L27.5356 10.0575L27.616 10.0425L27.6963 10.0271L27.7767 10.0112L27.857 9.99494L27.9374 9.97824L28.0177 9.96112L28.0981 9.94359L28.1785 9.92565L28.2588 9.9073L28.3392 9.88855L28.4195 9.86941L28.4999 9.84987L28.5803 9.82995L28.6606 9.80964L28.741 9.78896L28.8213 9.7679L28.9017 9.74648L28.9821 9.7247L29.0624 9.70257L29.1428 9.68008L29.2231 9.65724L29.3035 9.63407L29.3838 9.61056L29.4642 9.58673L29.5446 9.56257L29.6249 9.5381L29.7053 9.51332L29.7856 9.48823L29.866 9.46285L29.9464 9.43718L30.0267 9.41122L30.1071 9.38498L30.1874 9.35847L30.2678 9.33169L30.3482 9.30466L30.4285 9.27737L30.5089 9.24984L30.5892 9.22206L30.6696 9.19406L30.7499 9.16583L30.8303 9.13738L30.9107 9.10873L30.991 9.07987L31.0714 9.05081L31.1517 9.02156L31.2321 8.99213L31.3125 8.96252L31.3928 8.93275L31.4732 8.90281L31.5535 8.87272L31.6339 8.84249L31.7143 8.81212L31.7946 8.78162L31.875 8.75099L31.9553 8.72025L32.0357 8.6894L32.1161 8.65845L33 8.31356M0.936768 13.7572L1.90108 13.3807L1.98143 13.3498L2.06179 13.3189L2.14215 13.2882L2.22251 13.2576L2.30287 13.2271L2.38323 13.1967L2.46359 13.1665L2.54395 13.1364L2.62431 13.1064L2.70467 13.0767L2.78502 13.0471L2.86538 13.0176L2.94574 12.9884L3.0261 12.9593L3.10646 12.9305L3.18682 12.9018L3.26718 12.8734L3.34754 12.8451L3.4279 12.8171L3.50825 12.7894L3.58861 12.7618L3.66897 12.7345L3.74933 12.7075L3.82969 12.6807L3.91005 12.6542L3.99041 12.628L4.07077 12.602L4.15113 12.5763L4.23149 12.551L4.31184 12.5259L4.3922 12.5011L4.47256 12.4766L4.55292 12.4525L4.63328 12.4286L4.71364 12.4051L4.794 12.3819L4.87436 12.3591L4.95472 12.3366L5.03508 12.3145L5.11543 12.2927L5.19579 12.2713L5.27615 12.2502L5.35651 12.2295L5.43687 12.2092L5.51723 12.1893L5.59759 12.1698L5.67795 12.1506L5.75831 12.1319L5.83867 12.1135L5.91902 12.0956L5.99938 12.0781L6.07974 12.061L6.1601 12.0443L6.24046 12.028L6.32082 12.0121L6.40118 11.9967L6.48154 11.9817L6.5619 11.9672L6.64226 11.9531L6.72261 11.9394L6.80297 11.9262L6.88333 11.9134L6.96369 11.9011L7.04405 11.8893L7.12441 11.8779L7.20477 11.867L7.28513 11.8565L7.36549 11.8465L7.44585 11.837L7.5262 11.828L7.60656 11.8194L7.68692 11.8113L7.76728 11.8037L7.84764 11.7966L7.928 11.79L8.00836 11.7838L8.08872 11.7781L8.16908 11.7729L8.24943 11.7683L8.32979 11.7641L8.41015 11.7603L8.49051 11.7571L8.57087 11.7544L8.65123 11.7522L8.73159 11.7504L8.81195 11.7492L8.89231 11.7485L8.97267 11.7482L9.05302 11.7485L9.13338 11.7492L9.21374 11.7504L9.2941 11.7522L9.37446 11.7544L9.45482 11.7571L9.53518 11.7603L9.61554 11.7641L9.6959 11.7683L9.77626 11.7729L9.85661 11.7781L9.93697 11.7838L10.0173 11.79L10.0977 11.7966L10.1781 11.8037L10.2584 11.8113L10.3388 11.8194L10.4191 11.828L10.4995 11.837L10.5798 11.8465L10.6602 11.8565L10.7406 11.867L10.8209 11.8779L10.9013 11.8893L10.9816 11.9011L11.062 11.9134L11.1424 11.9262L11.2227 11.9394L11.3031 11.9531L11.3834 11.9672L11.4638 11.9817L11.5442 11.9967L11.6245 12.0121L11.7049 12.028L11.7852 12.0443L11.8656 12.061L11.9459 12.0781L12.0263 12.0956L12.1067 12.1135L12.187 12.1319L12.2674 12.1506L12.3477 12.1698L12.4281 12.1893L12.5085 12.2092L12.5888 12.2295L12.6692 12.2502L12.7495 12.2713L12.8299 12.2927L12.9103 12.3145L12.9906 12.3366L13.071 12.3591L13.1513 12.3819L13.2317 12.4051L13.3121 12.4286L13.3924 12.4525L13.4728 12.4766L13.5531 12.5011L13.6335 12.5259L13.7138 12.551L13.7942 12.5763L13.8746 12.602L13.9549 12.628L14.0353 12.6542L14.1156 12.6807L14.196 12.7075L14.2764 12.7345L14.3567 12.7618L14.4371 12.7894L14.5174 12.8171L14.5978 12.8451L14.6782 12.8734L14.7585 12.9018L14.8389 12.9305L14.9192 12.9593L14.9996 12.9884L15.0799 13.0176L15.1603 13.0471L15.2407 13.0767L15.321 13.1064L15.4014 13.1364L15.4817 13.1665L15.5621 13.1967L15.6425 13.2271L15.7228 13.2576L15.8032 13.2882L15.8835 13.3189L15.9639 13.3498L16.0443 13.3807L17.9729 14.1336L18.0532 14.1646L18.1336 14.1954L18.2139 14.2262L18.2943 14.2568L18.3747 14.2873L18.455 14.3177L18.5354 14.3479L18.6157 14.378L18.6961 14.4079L18.7765 14.4377L18.8568 14.4673L18.9372 14.4967L19.0175 14.526L19.0979 14.555L19.1783 14.5839L19.2586 14.6126L19.339 14.641L19.4193 14.6692L19.4997 14.6972L19.5801 14.725L19.6604 14.7525L19.7408 14.7798L19.8211 14.8069L19.9015 14.8336L19.9818 14.8602L20.0622 14.8864L20.1426 14.9124L20.2229 14.938L20.3033 14.9634L20.3836 14.9885L20.464 15.0133L20.5444 15.0378L20.6247 15.0619L20.7051 15.0857L20.7854 15.1092L20.8658 15.1324L20.9462 15.1553L21.0265 15.1777L21.1069 15.1999L21.1872 15.2217L21.2676 15.2431L21.3479 15.2641L21.4283 15.2848L21.5087 15.3051L21.589 15.325L21.6694 15.3446L21.7497 15.3637L21.8301 15.3825L21.9105 15.4008L21.9908 15.4188L22.0712 15.4363L22.1515 15.4534L22.2319 15.4701L22.3123 15.4864L22.3926 15.5022L22.473 15.5177L22.5533 15.5326L22.6337 15.5472L22.7141 15.5613L22.7944 15.575L22.8748 15.5882L22.9551 15.6009L23.0355 15.6132L23.1158 15.6251L23.1962 15.6365L23.2766 15.6474L23.3569 15.6578L23.4373 15.6678L23.5176 15.6773L23.598 15.6864L23.6784 15.695L23.7587 15.703L23.8391 15.7107L23.9194 15.7178L23.9998 15.7244L24.0802 15.7306L24.1605 15.7362L24.2409 15.7414L24.3212 15.7461L24.4016 15.7503L24.4819 15.754L24.5623 15.7572L24.6427 15.76L24.723 15.7622L24.8034 15.7639L24.8837 15.7652L24.9641 15.7659L25.0445 15.7662L25.1248 15.7659L25.2052 15.7652L25.2855 15.7639L25.3659 15.7622L25.4463 15.76L25.5266 15.7572L25.607 15.754L25.6873 15.7503L25.7677 15.7461L25.8481 15.7414L25.9284 15.7362L26.0088 15.7306L26.0891 15.7244L26.1695 15.7178L26.2498 15.7107L26.3302 15.703L26.4106 15.695L26.4909 15.6864L26.5713 15.6773L26.6516 15.6678L26.732 15.6578L26.8124 15.6474L26.8927 15.6365L26.9731 15.6251L27.0534 15.6132L27.1338 15.6009L27.2142 15.5882L27.2945 15.575L27.3749 15.5613L27.4552 15.5472L27.5356 15.5326L27.616 15.5177L27.6963 15.5022L27.7767 15.4864L27.857 15.4701L27.9374 15.4534L28.0177 15.4363L28.0981 15.4188L28.1785 15.4008L28.2588 15.3825L28.3392 15.3637L28.4195 15.3446L28.4999 15.325L28.5803 15.3051L28.6606 15.2848L28.741 15.2641L28.8213 15.2431L28.9017 15.2217L28.9821 15.1999L29.0624 15.1777L29.1428 15.1553L29.2231 15.1324L29.3035 15.1092L29.3838 15.0857L29.4642 15.0619L29.5446 15.0378L29.6249 15.0133L29.7053 14.9885L29.7856 14.9634L29.866 14.938L29.9464 14.9124L30.0267 14.8864L30.1071 14.8602L30.1874 14.8336L30.2678 14.8069L30.3482 14.7798L30.4285 14.7525L30.5089 14.725L30.5892 14.6972L30.6696 14.6692L30.7499 14.641L30.8303 14.6126L30.9107 14.5839L30.991 14.555L31.0714 14.526L31.1517 14.4967L31.2321 14.4673L31.3125 14.4377L31.3928 14.4079L31.4732 14.378L31.5535 14.3479L31.6339 14.3177L31.7143 14.2873L31.7946 14.2568L31.875 14.2262L31.9553 14.1954L32.0357 14.1646L32.1161 14.1336L33 13.7887"
+									stroke="currentColor"
+									stroke-miterlimit="10"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+						</div>
+						<div class="exit-menu-button-svg w-embed">
+							<svg
+								width="16"
+								height="17"
+								viewbox="0 0 16 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M13.4399 16.2118C13.4779 16.2569 13.5339 16.283 13.5928 16.283H15.5391C15.709 16.283 15.8015 16.0845 15.6923 15.9543L9.3674 8.42315C9.3049 8.34872 9.30494 8.24013 9.36752 8.16576L15.7233 0.611721C15.8327 0.481631 15.7402 0.282959 15.5702 0.282959H13.6267C13.5665 0.282959 13.5094 0.310102 13.4715 0.356848L8.2726 6.7561C8.19343 6.85355 8.0451 6.85481 7.96429 6.75872L2.57862 0.354237C2.54062 0.309048 2.48459 0.282959 2.42555 0.282959H0.479712C0.30974 0.282959 0.217246 0.481553 0.326623 0.611658L6.62018 8.09795C6.68238 8.17195 6.68276 8.27984 6.62108 8.35427L0.321802 15.9553C0.213765 16.0857 0.306481 16.283 0.475794 16.283H2.42257C2.48332 16.283 2.54078 16.2553 2.57873 16.2079L7.7147 9.78928C7.79347 9.69084 7.94255 9.68894 8.0238 9.78534L13.4399 16.2118Z"
+									fill="currentcolor"
+								></path>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-styles w-embed">
+				<style>
+					.wave-link.is--first {
+						background-image: url('https://uploads-ssl.webflow.com/6490147be4f743ad6fe5e064/64917c59ab5973759b67ed50_Frame%205419.svg');
+						background-position: bottom;
+						animation: backgroundSlide 10s linear infinite;
+					}
+					.wave-link {
+						background-image: url('https://uploads-ssl.webflow.com/6490147be4f743ad6fe5e064/6491841649e260dbbe31e0c6_Frame%205420.svg');
+						background-position: bottom;
+						animation: backgroundSlide 10s linear infinite;
+					}
+					@keyframes backgroundSlide {
+						0% {
+							background-position: bottom left;
+						}
+						100% {
+							background-position: bottom right;
+						}
+					}
+					.hover-link-wrap {
+						pointer-events: none;
+					}
+					/*Our work slide css*/
+					.our-work-col-item:nth-child(1) {
+						margin-top: 2.8rem;
+					}
+					.our-work-col-item:nth-child(2) {
+						margin-top: 8.3rem;
+					}
+					.our-work-col-item:nth-child(3) {
+						margin-top: 0rem;
+					}
+					.our-work-col-item:nth-child(4) {
+						margin-top: 2.8rem;
+					}
+					.our-work-col-item:nth-child(5) {
+						margin-top: 8.3rem;
+					}
+					.our-work-col-item:nth-child(6) {
+						margin-top: 2.4rem;
+					}
+					.our-work-col-item:nth-child(7) {
+						margin-top: 0rem;
+					}
+					.our-work-col-item:nth-child(8) {
+						margin-top: 8rem;
+					}
+					.our-work-col-item:nth-child(9) {
+						margin-top: 2.8rem;
+					}
+					.our-work-col-item:nth-child(10) {
+						margin-top: 0rem;
+					}
+					.swiper-slide.our-work-col-item {
+						max-width: 66.1rem;
+					}
+					@media only screen and (max-width: 991px) {
+						@keyframes carouselAnimation {
+							0% {
+								transform: translateX(0);
+							}
+							100% {
+								transform: translateX(-100%);
+							}
+						}
+						.backed-by-logos-list {
+							animation: carouselAnimation 50s infinite linear; /* Adjust the animation duration as needed */
+						}
+						.swiper-slide.our-work-col-item {
+							max-width: 26rem;
+						}
+					}
+					.about_item {
+						pointer-events: none;
+					}
+					.video-btn {
+						pointer-events: none;
+					}
+					.theres-something-video-wrap .video-btn-svg {
+						opacity: 0;
+					}
+					.theres-something-video-wrap:hover .video-btn-svg {
+						opacity: 1;
+					}
+					.colors-bg-wrapper {
+						pointer-events: none;
+					}
+				</style>
+			</div>
+			<main class="main-wrapper">
+				<section
+					data-color="#EDF1F7"
+					mt-el="background"
+					class="section_homepage-hero wf-section"
+				>
+					<div class="container">
+						<header class="homepage_hero-header">
+							<h1 class="heompage_h1">
+								Bringing the Promise of Cultivated Seafood to Your Plate
+							</h1>
+						</header>
+
+						<div class="absolute-wrapper">
+							<div class="backed-by-wrapper">
+								<div class="backed-by-text">Backed by</div>
+								<div class="backed-by-logos-wrap">
+									<div class="backed-by-logos-list">
+										<img
+											src="images/Israel-innovation-Authority.png"
+											loading="lazy"
+											width="92"
+											alt="Israel innovation Authority"
+											class="backed-by-logo"
+										/><img
+											src="images/Milk--honey.png"
+											loading="lazy"
+											width="92"
+											alt="Milk &amp; honey"
+											class="backed-by-logo"
+										/><img
+											src="images/Zora-ventures.png"
+											loading="lazy"
+											width="92"
+											alt="Zora ventures"
+											class="backed-by-logo"
+										/><img
+											src="images/Target-Global.png"
+											loading="lazy"
+											width="92"
+											alt="Target Global"
+											class="backed-by-logo"
+										/><img
+											src="images/Hack.png"
+											loading="lazy"
+											width="92"
+											alt="Hack"
+											class="backed-by-logo"
+										/><img
+											src="images/Tel-Aviv-University-Ramot.png"
+											loading="lazy"
+											width="92"
+											alt="Tel Aviv Universiity Ramot"
+											class="backed-by-logo"
+										/><img
+											src="images/Yissum.png"
+											loading="lazy"
+											width="92"
+											alt="Yissum"
+											class="backed-by-logo"
+										/><img
+											src="images/Peakbridge.png"
+											loading="lazy"
+											width="92"
+											alt="Peakbridge"
+											class="backed-by-logo"
+										/><img
+											src="images/The-Kitchen---Foodtech-hub.png"
+											loading="lazy"
+											width="92"
+											alt="The Kitchen  Foodtech hub"
+											class="backed-by-logo"
+										/><img
+											src="images/Strauss.png"
+											loading="lazy"
+											width="92"
+											alt="Strauss"
+											class="backed-by-logo"
+										/>
+									</div>
+									<div class="backed-by-logos-list">
+										<img
+											src="images/Israel-innovation-Authority.png"
+											loading="lazy"
+											width="92"
+											alt="Israel innovation Authority"
+											class="backed-by-logo"
+										/><img
+											src="images/Milk--honey.png"
+											loading="lazy"
+											width="92"
+											alt="Milk &amp; honey"
+											class="backed-by-logo"
+										/><img
+											src="images/Zora-ventures.png"
+											loading="lazy"
+											width="92"
+											alt="Zora ventures"
+											class="backed-by-logo"
+										/><img
+											src="images/Target-Global.png"
+											loading="lazy"
+											width="92"
+											alt="Target Global"
+											class="backed-by-logo"
+										/><img
+											src="images/Hack.png"
+											loading="lazy"
+											width="92"
+											alt="Hack"
+											class="backed-by-logo"
+										/><img
+											src="images/Tel-Aviv-University-Ramot.png"
+											loading="lazy"
+											width="92"
+											alt="Tel Aviv Universiity Ramot"
+											class="backed-by-logo"
+										/><img
+											src="images/Yissum.png"
+											loading="lazy"
+											width="92"
+											alt="Yissum"
+											class="backed-by-logo"
+										/><img
+											src="images/Peakbridge.png"
+											loading="lazy"
+											width="92"
+											alt="Peakbridge"
+											class="backed-by-logo"
+										/><img
+											src="images/The-Kitchen---Foodtech-hub.png"
+											loading="lazy"
+											width="92"
+											alt="The Kitchen  Foodtech hub"
+											class="backed-by-logo"
+										/><img
+											src="images/Strauss.png"
+											loading="lazy"
+											width="92"
+											alt="Strauss"
+											class="backed-by-logo"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="webflow-embed"><div id="app"></div></div>
+					</div>
+				</section>
+				<section
+					mt-el="background"
+					data-color="#DEEAFF"
+					class="section_seafood-meat wf-section"
+				>
+					<div class="layout-container">
+						<img
+							src="./Sushi-big-image.webp"
+							loading="lazy"
+							alt=""
+							id="w-node-bdc3036c-25d0-cf39-9022-feedb86ecf8a-6fe5e067"
+							width="1179"
+							class="seafood-placeholder-image"
+						/>
+						<img class="ready-img" src="unagi.webp" alt="" />
+						<div
+							id="w-node-da2902d1-aa59-bae7-b48d-4fa447963003-6fe5e067"
+							class="layout-container-inner"
+						>
+							<div
+								id="w-node-_7c4c6426-61b2-26c6-8f0e-0949a5e479ea-6fe5e067"
+								class="layout-content"
+							>
+								<h2 class="seafood-h2">
+									Seafood meat cultivation. With extra innovation.
+								</h2>
+								<p class="seafood-p">
+									By harnessing nature’s tissue formation methods, we are able
+									to produce non-GMO cultivated seafood meat in an efficient and
+									cost-effective manner – making price parity an achievable
+									reality.
+								</p>
+								<a href="#" class="read-more-button w-button"
+									>Read more about our technology</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="who-we-are-wrapper">
+						<div class="horizontal-flex is--who-we-are">
+							<div class="content-left-side">
+								<h2 class="who-we-are-h2">Who we are</h2>
+							</div>
+							<div class="who-we-are-right-content">
+								<div class="about_item">
+									<img
+										src="images/image-14.png"
+										loading="lazy"
+										width="330"
+										sizes="(max-width: 479px) 50vw, (max-width: 991px) 200px, 16vw"
+										srcset="
+											images/image-14-p-500.png 500w,
+											images/image-14.png       660w
+										"
+										alt=""
+										class="about_image"
+									/>
+								</div>
+								<div class="about_item">
+									<img
+										src="images/A-bold-new-direction-for-seafood-cultivation.jpg"
+										loading="lazy"
+										width="330"
+										sizes="(max-width: 479px) 50vw, (max-width: 991px) 200px, 16vw"
+										srcset="
+											images/A-bold-new-direction-for-seafood-cultivation-p-500.jpg   500w,
+											images/A-bold-new-direction-for-seafood-cultivation-p-800.jpg   800w,
+											images/A-bold-new-direction-for-seafood-cultivation-p-1080.jpg 1080w,
+											images/A-bold-new-direction-for-seafood-cultivation.jpg        1600w
+										"
+										alt=""
+										class="about_image"
+									/>
+								</div>
+								<p class="who-we-are-p">
+									<span
+										mt-el="hover-el"
+										data-w-id="47f4c1a3-7793-a7b7-4349-82e4c02d1fc0"
+										class="wave-link"
+										>Forsea</span
+									>
+									is proud to play an integral role in creating a sustainable
+									alternative to fishing, and aquaculture, and to serve as
+									protectors of our oceans’ rich ecosystems and immeasurable
+									beauty.<br /><br />We’re cultivating the meat of fish from the
+									IUCN red list of
+									<span
+										mt-el="hover-el"
+										data-w-id="54b94905-f942-a58f-a69d-6bde5033ea28"
+										class="wave-link"
+										>threatened species.</span
+									>
+									Our first focus is cultivated eel meat.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					mt-el="background-2"
+					data-w-id="573b8d0a-089b-c493-7b60-6c7c9ea41b75"
+					class="section_theres-something wf-section"
+				>
+					<div class="container">
+						<div class="there-something-flex">
+							<div class="left-side-header-wrap">
+								<h2 class="theres-something-h2">
+									There’s something you should sea
+								</h2>
+							</div>
+							<div class="theres-something-video-wrap">
+								<div class="theres-somethng-video-embed w-embed">
+									<video
+										id="myVideo"
+										class="hero-video"
+										preload=""
+										playsinline=""
+										poster="https://uploads-ssl.webflow.com/6490147be4f743ad6fe5e064/64a2a60b50670639a53a639f_video-bg.jpg"
+									>
+										<source
+											src="https://www.dl.dropboxusercontent.com/s/1letg63ini7pbol/RNGS%20-%20ShowReel%20Web.mp4"
+											type="video/mp4"
+										/>
+									</video>
+									<style>
+										.hero-video {
+											width: 100%;
+											height: 100%;
+										}
+									</style>
+								</div>
+								<div class="video-btn">
+									<img
+										src="images/video-button.svg"
+										loading="lazy"
+										alt=""
+										class="video-btn-svg"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section_seabed wf-section">
+					<div class="container">
+						<div class="seabed-600vh">
+							<div
+								data-w-id="58e900ba-c583-fff8-dd08-5f132920a895"
+								class="seabed-90vh"
+							>
+								<div class="seabed-header">
+									<h2 class="seabed-h2">A Seabed of Unique Advantages</h2>
+									<p class="seabed-subhead">
+										We’ve perfected the commercially-viable seafood cultivation
+										process. <span class="is--medium">But that’s not all:</span>
+									</p>
+								</div>
+								<div class="seabed-lotties-wrapper">
+									<div class="seabed-lotties-inner-wrapper">
+										<div
+											class="seabed-lottie"
+											data-w-id="3f4de17d-a922-99e6-ef5e-97795a2221e4"
+											data-animation-type="lottie"
+											data-src="documents/platform-forall.lottie"
+											data-loop="0"
+											data-direction="1"
+											data-autoplay="1"
+											data-is-ix2-target="0"
+											data-renderer="svg"
+											data-duration="0"
+										></div>
+										<div class="lotties-text">
+											Significant reduction of growth factors use
+										</div>
+									</div>
+									<div class="seabed-lotties-inner-wrapper">
+										<div
+											class="seabed-lottie"
+											data-w-id="e1f6cb5e-1707-ca61-2fa2-580b2fdab7ad"
+											data-animation-type="lottie"
+											data-src="documents/platform-forall.lottie"
+											data-loop="0"
+											data-direction="1"
+											data-autoplay="1"
+											data-is-ix2-target="0"
+											data-renderer="svg"
+											data-duration="0"
+										></div>
+										<div class="lotties-text">
+											Significant reduction of growth factors use
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					data-color="#EDF1F7"
+					mt-el="background"
+					class="section_our-work wf-section"
+				>
+					<div class="container">
+						<h2 class="our-work-h2">Our Work is Making Waves</h2>
+						<div class="swiper our-work-collection-wrapper w-dyn-list">
+							<div
+								role="list"
+								class="swiper-wrapper our-wrok-col-list w-dyn-items"
+							>
+								<div
+									role="listitem"
+									class="swiper-slide our-work-col-item w-dyn-item"
+								>
+									<div class="our-work-slide-item">
+										<div class="our-work-quote"></div>
+										<div class="our-work-name-position-wrap">
+											<div class="our-work-position"></div>
+											<div class="our-work-position is--comma">,</div>
+											<div class="our-work-position is--position"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="w-dyn-empty">
+								<div>No items found.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer wf-section">
+				<div class="footer-container">
+					<div class="footer-wrap">
+						<div class="footer-column">
+							<a
+								href="index.html"
+								aria-current="page"
+								class="footer-brand w-inline-block w--current"
+								><img
+									src="images/Forsea-logo-white.png"
+									loading="lazy"
+									width="384"
+									sizes="(max-width: 479px) 79vw, (max-width: 991px) 193px, 31vw"
+									srcset="
+										images/Forsea-logo-white-p-500.png 500w,
+										images/Forsea-logo-white.png       768w
+									"
+									alt="Forsea logo white"
+									class="footer-logp"
+							/></a>
+						</div>
+						<div class="footer-column">
+							<div class="footer-form-block w-form">
+								<div class="form-header-wrap">
+									<h2 class="heading">Sea What We’re Up To</h2>
+									<div class="footer-form-p">Sign up for our newsletter!</div>
+								</div>
+								<form
+									id="wf-form-Newsletter"
+									name="wf-form-Newsletter"
+									data-name="Newsletter"
+									method="get"
+									class="footer-form"
+									data-wf-page-id="6490147be4f743ad6fe5e067"
+									data-wf-element-id="81a208e4-1648-11fc-1ef9-b74160577647"
+								>
+									<div class="footer-feild-wrapper">
+										<label for="Email" class="hide">Your email here</label
+										><input
+											type="email"
+											class="input is--footer w-input"
+											maxlength="256"
+											name="Email"
+											data-name="Email"
+											placeholder="Your email here"
+											id="Email"
+											required=""
+										/><input
+											type="submit"
+											value="Sign up"
+											data-wait="Please wait..."
+											class="footer-submit w-button"
+										/>
+									</div>
+								</form>
+								<div class="footer-success w-form-done">
+									<div>Thank you! Your submission has been received!</div>
+								</div>
+								<div class="footer-error w-form-fail">
+									<div>
+										Oops! Something went wrong while submitting the form.
+									</div>
+								</div>
+							</div>
+							<div class="footer-content">
+								<div class="footer-content-column">
+									<a href="#" class="footer-link">Technology</a>
+									<a href="about.html" class="footer-link">About us</a>
+									<a href="impact.html" class="footer-link">Impact</a>
+								</div>
+								<div class="footer-content-column">
+									<a href="career-lobby.html" class="footer-link">Careers</a>
+									<a href="contact.html" class="footer-link">Contact Us</a>
+									<a href="news.html" class="footer-link">News</a>
+								</div>
+								<div class="footer-content-column">
+									<a
+										href="https://www.linkedin.com/company/forseafoods/"
+										target="_blank"
+										class="footer-link"
+										>Linkedin</a
+									>
+								</div>
+							</div>
+							<div class="footer-copyrights">
+								© 2023 forsea. All rights reserved
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script
+			src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6490147be4f743ad6fe5e064"
+			type="text/javascript"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"
+		></script>
+		<!-- <script src="js/forsea.js" type="text/javascript"></script> -->
+		
+		<script>
+			/*Navbar scroll*/
+			document.addEventListener('scroll', function () {
+				const nav = document.querySelector('.navbar');
+				const initialNavHeight = nav.offsetHeight;
+				nav.classList.toggle('is-scrolled', window.scrollY > initialNavHeight);
+			});
+		</script>
+	</body>
+</html>

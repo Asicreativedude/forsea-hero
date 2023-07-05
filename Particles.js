@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const readyImg = document.querySelector('.ready-img');
+const readyImg = document.querySelector('.unagi-seafood-image');
 const canvas = document.getElementById('app');
 const isTablet = window.innerWidth < 991;
 const isMobile = window.innerWidth < 767;
