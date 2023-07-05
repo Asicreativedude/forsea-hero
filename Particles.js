@@ -3,7 +3,9 @@ import fragmentShader from './shaders/fragmentShader.frag';
 import vertexShader from './shaders/vertexShader.vert';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
+
 const readyImg = document.querySelector('.ready-img');
 const canvas = document.getElementById('app');
 const isTablet = window.innerWidth < 991;
