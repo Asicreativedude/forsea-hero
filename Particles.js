@@ -10,7 +10,7 @@ const readyImg = document.querySelector('.unagi-seafood-image');
 const canvas = document.getElementById('app');
 const isTablet = window.innerWidth < 991;
 const isMobile = window.innerWidth < 767;
-function Particles(scene) {
+function Particles(scene, renderer, animation) {
 	const loader = new THREE.TextureLoader();
 	let texWidth = 0;
 	let texHeight = 0;
@@ -58,7 +58,7 @@ function Particles(scene) {
 			uTime: { value: 5.0 },
 			uRandom: { value: 150.0 },
 			uDepth: { value: 1.0 },
-			uSize: { value: 1.0 },
+			uSize: { value: isTablet ? 0.4 : 0.5 },
 			uTextureSize: { value: new THREE.Vector2(texWidth, texHeight) },
 			uTexture: { value: texture },
 			uTouch: { value: null },
@@ -127,12 +127,14 @@ function Particles(scene) {
 		);
 
 		const mesh = new THREE.Mesh(geometry, material);
+		console.log(mesh);
+
 		{
 			isTablet
 				? ((mesh.position.y = 65),
 				  mesh.scale.set(0.6, 0.6, 0.6),
 				  (mesh.position.x = -25))
-				: ((mesh.position.x = 170), (mesh.position.y = -1));
+				: ((mesh.position.x = 155), (mesh.position.y = 0));
 		}
 		{
 			isMobile &&
@@ -140,6 +142,12 @@ function Particles(scene) {
 				mesh.scale.set(0.4, 0.4, 0.4),
 				(mesh.position.x = -25));
 		}
+		window.innerWidth > 1440
+			? (mesh.scale.set(0.8, 0.8, 0.8),
+			  (mesh.position.x = 195),
+			  (mesh.position.y = -35))
+			: mesh.scale.set(0.6, 0.6, 0.6);
+
 		mesh.rotateZ(0.35447637);
 		scene.add(mesh);
 		onload(mesh);
@@ -161,6 +169,7 @@ function Particles(scene) {
 				id: 'first',
 			}
 		);
+
 		gsap.to(mesh.material.uniforms.uRandom, {
 			scrollTrigger: {
 				trigger: '.section_seafood-meat',
@@ -203,12 +212,18 @@ function Particles(scene) {
 		scrollTrigger: {
 			trigger: '.section_seafood-meat',
 			start: isTablet ? 'top 10%' : 'top 3%',
-			end: isTablet ? 'top 6%' : isMobile ? 'top top' : 'top -2%',
+			end: isTablet ? 'top 6%' : isMobile ? 'top top' : 'top -1%',
 			// markers: true,
 			scrub: true,
+			onEnterBack: () => {
+				renderer.setAnimationLoop(animation);
+			},
 		},
 		duration: 1,
 		opacity: 0,
+		onComplete: () => {
+			renderer.setAnimationLoop(null);
+		},
 	});
 }
 

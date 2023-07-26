@@ -19,10 +19,34 @@ renderer.setAnimationLoop(animation);
 canvas.appendChild(renderer.domElement);
 
 // particles
-const particles = new Particles(scene);
+const particles = new Particles(scene, renderer, animation);
+
+// resize
+function resize(renderer) {
+	const canvas = renderer.domElement;
+	const width = canvas.clientWidth;
+	const height = canvas.clientHeight;
+	const needResize = canvas.width !== width || canvas.height !== height;
+	if (needResize) {
+		renderer.setSize(width, height, false);
+	}
+	return needResize;
+}
+
+window.addEventListener('resize', function () {
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+
+	renderer.setSize(window.innerWidth, window.innerHeight);
+});
 
 // animation
 
 function animation(time) {
+	if (resize(renderer)) {
+		camera.aspect = canvas.clientWidth / canvas.clientHeight;
+		camera.updateProjectionMatrix();
+	}
+
 	renderer.render(scene, camera);
 }

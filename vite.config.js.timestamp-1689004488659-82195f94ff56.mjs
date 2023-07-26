@@ -1,0 +1,21 @@
+// vite.config.js
+import glslify from "file:///C:/Users/asicr/Dropbox/PC/Desktop/Work/Forsea/forsea-hero/forsea-hero/node_modules/rollup-plugin-glslify/index.js";
+var vite_config_default = {
+  publicDir: "public/",
+  base: "./",
+  build: {
+    outDir: "./dist/",
+    // emptyOutDir: true,
+    // sourcemap: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: "main.js"
+      }
+    }
+  },
+  plugins: [glslify()]
+};
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJDOlxcXFxVc2Vyc1xcXFxhc2ljclxcXFxEcm9wYm94XFxcXFBDXFxcXERlc2t0b3BcXFxcV29ya1xcXFxGb3JzZWFcXFxcZm9yc2VhLWhlcm9cXFxcZm9yc2VhLWhlcm9cIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfZmlsZW5hbWUgPSBcIkM6XFxcXFVzZXJzXFxcXGFzaWNyXFxcXERyb3Bib3hcXFxcUENcXFxcRGVza3RvcFxcXFxXb3JrXFxcXEZvcnNlYVxcXFxmb3JzZWEtaGVyb1xcXFxmb3JzZWEtaGVyb1xcXFx2aXRlLmNvbmZpZy5qc1wiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9pbXBvcnRfbWV0YV91cmwgPSBcImZpbGU6Ly8vQzovVXNlcnMvYXNpY3IvRHJvcGJveC9QQy9EZXNrdG9wL1dvcmsvRm9yc2VhL2ZvcnNlYS1oZXJvL2ZvcnNlYS1oZXJvL3ZpdGUuY29uZmlnLmpzXCI7aW1wb3J0IGdsc2xpZnkgZnJvbSAncm9sbHVwLXBsdWdpbi1nbHNsaWZ5JztcclxuXHJcbi8vIC4uLlxyXG5cclxuZXhwb3J0IGRlZmF1bHQge1xyXG5cdHB1YmxpY0RpcjogJ3B1YmxpYy8nLFxyXG5cdGJhc2U6ICcuLycsXHJcblx0YnVpbGQ6IHtcclxuXHRcdG91dERpcjogJy4vZGlzdC8nLFxyXG5cdFx0Ly8gZW1wdHlPdXREaXI6IHRydWUsXHJcblx0XHQvLyBzb3VyY2VtYXA6IHRydWUsXHJcblx0XHRyb2xsdXBPcHRpb25zOiB7XHJcblx0XHRcdG91dHB1dDoge1xyXG5cdFx0XHRcdGVudHJ5RmlsZU5hbWVzOiAnbWFpbi5qcycsXHJcblx0XHRcdH0sXHJcblx0XHR9LFxyXG5cdH0sXHJcblx0cGx1Z2luczogW2dsc2xpZnkoKV0sXHJcbn07XHJcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBcVosT0FBTyxhQUFhO0FBSXphLElBQU8sc0JBQVE7QUFBQSxFQUNkLFdBQVc7QUFBQSxFQUNYLE1BQU07QUFBQSxFQUNOLE9BQU87QUFBQSxJQUNOLFFBQVE7QUFBQTtBQUFBO0FBQUEsSUFHUixlQUFlO0FBQUEsTUFDZCxRQUFRO0FBQUEsUUFDUCxnQkFBZ0I7QUFBQSxNQUNqQjtBQUFBLElBQ0Q7QUFBQSxFQUNEO0FBQUEsRUFDQSxTQUFTLENBQUMsUUFBUSxDQUFDO0FBQ3BCOyIsCiAgIm5hbWVzIjogW10KfQo=
